@@ -35,8 +35,8 @@ public class CardModel {
     private OnClickListener mOnClickListener = null;
 
     public interface OnCardDimissedListener {
-        void onLike();
-        void onDislike();
+        void onFalse();
+    	void onTrue();
     }
 
     public interface OnClickListener {

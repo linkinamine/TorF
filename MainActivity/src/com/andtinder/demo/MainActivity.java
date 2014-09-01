@@ -86,15 +86,16 @@ public class MainActivity extends Activity {
            }
         });
 
+        
         cardModel.setOnCardDimissedListener(new CardModel.OnCardDimissedListener() {
             @Override
-            public void onLike() {
+            public void onTrue() {
                 Log.i("Swipeable Cards","I like the card");
                 Toast.makeText(getApplicationContext(), "right", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onDislike() {
+            public void onFalse() {
                 Log.i("Swipeable Cards","I dislike the card");
                 Toast.makeText(getApplicationContext(), "left", Toast.LENGTH_SHORT).show();
 
