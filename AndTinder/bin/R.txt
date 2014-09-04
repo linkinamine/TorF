@@ -18,16 +18,9 @@ int drawable picture1 0x7f02000b
 int drawable picture2 0x7f02000c
 int drawable picture3 0x7f02000d
 int drawable slideshow 0x7f02000e
-int id btn_sep_1 0x7f04000a
-int id btn_sep_2 0x7f04000b
-int id description 0x7f040008
 int id disordered 0x7f040001
-int id divider_bottom 0x7f040006
 int id divider_title 0x7f040004
 int id global_container 0x7f040002
-int id image 0x7f040005
-int id image_1 0x7f040007
-int id image_2 0x7f040009
 int id ordered 0x7f040000
 int id title 0x7f040003
 int layout std_card_inner 0x7f030000
