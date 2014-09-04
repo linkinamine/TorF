@@ -62,6 +62,7 @@ public final class R {
         public static int action_settings=0x7f070002;
         public static int app_name=0x7f070000;
         public static int hello_world=0x7f070001;
+        public static int slogan=0x7f070003;
     }
     public static final class styleable {
         /** Attributes that can be used with a CardContainer.

@@ -27,6 +27,7 @@ int layout std_card_inner 0x7f030000
 int string action_settings 0x7f070002
 int string app_name 0x7f070000
 int string hello_world 0x7f070001
+int string slogan 0x7f070003
 int[] styleable CardContainer { 0x010100af, 0x7f010000 }
 int styleable CardContainer_android_gravity 0
 int styleable CardContainer_orientation 1

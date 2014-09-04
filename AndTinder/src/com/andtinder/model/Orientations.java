@@ -26,7 +26,7 @@ public class Orientations {
 		        if(index < 0 || index >= values.length) {
 			        throw new IndexOutOfBoundsException();
 		        }
-		        return Ordered;
+		        return values[index];
 	        }
 	    }
 }

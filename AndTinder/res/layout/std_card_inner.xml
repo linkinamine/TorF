@@ -3,13 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/global_container"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+   >
+
 
     <TextView
         android:id="@+id/title"
         style="@android:style/TextAppearance.Large.Inverse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@color/card_bg"
         android:fontFamily="sans-serif-condensed"
         android:padding="10dp"
@@ -44,14 +48,15 @@
     <!-- android:background="@color/card_outline" /> -->
 
 
-<!--  <View
+    <!--
+      <View
         android:layout_width="fill_parent"
         android:layout_height="10dp"
         android:layout_alignBottom="@+id/image_1"
         android:layout_below="@+id/divider_bottom"
         android:background="@color/card_bg"
-        /> -->
-
+        />
+    -->
 
 
     <!--
@@ -112,5 +117,7 @@
         android:padding="10dp"
         android:src="@drawable/people"/>
     -->
+
+    
 
 </RelativeLayout>
