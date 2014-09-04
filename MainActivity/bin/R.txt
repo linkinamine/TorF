@@ -19,17 +19,19 @@ int drawable picture2 0x7f02000c
 int drawable picture3 0x7f02000d
 int drawable slideshow 0x7f02000e
 int id disordered 0x7f040001
-int id divider_title 0x7f040006
-int id global_container 0x7f040004
+int id divider_title 0x7f040007
+int id global_container 0x7f040005
 int id layoutfull 0x7f040002
-int id layoutview 0x7f040003
+int id layoutview 0x7f040004
 int id ordered 0x7f040000
-int id title 0x7f040005
+int id textView1 0x7f040003
+int id title 0x7f040006
 int layout mainlayout 0x7f030000
 int layout std_card_inner 0x7f030001
 int string action_settings 0x7f070002
 int string app_name 0x7f070000
 int string hello_world 0x7f070001
+int string slogan 0x7f070003
 int style AppTheme 0x7f080000
 int[] styleable CardContainer { 0x010100af, 0x7f010000 }
 int styleable CardContainer_android_gravity 0

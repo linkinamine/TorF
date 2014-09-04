@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 	 */
 	private CardContainer mCardContainer;
 	private LinearLayout linearLayout;
-	final static int INTERVAL = 5000; // 1 second
+	final static int INTERVAL = 800; // 1 second
     boolean whichColor = true;
     
 	private static int count = 0;
@@ -73,6 +73,8 @@ public class MainActivity extends Activity {
 			}
 		});
 
+	
+	
 		cardModel
 				.setOnCardDimissedListener(new CardModel.OnCardDimissedListener() {
 					@Override
@@ -81,7 +83,20 @@ public class MainActivity extends Activity {
 						count++;
 						linearLayout.setBackgroundColor(Color.GREEN);
 
-
+						  new Thread(new Runnable() {
+					            public void run() {
+					                while (true) {
+					                    try {
+					                        Thread.sleep(INTERVAL);
+					                    } 
+					                    catch (InterruptedException e) {
+					                        e.printStackTrace();
+					                    }
+					                    updateColor();
+					                    
+					                }
+					            }
+					        }).start();
 					}
 
 					@Override
@@ -90,7 +105,20 @@ public class MainActivity extends Activity {
 						count--;
 						linearLayout.setBackgroundColor(Color.RED);
 
-
+						  new Thread(new Runnable() {
+					            public void run() {
+					                while (true) {
+					                    try {
+					                        Thread.sleep(INTERVAL);
+					                    } 
+					                    catch (InterruptedException e) {
+					                        e.printStackTrace();
+					                    }
+					                    updateColor();
+					                    
+					                }
+					            }
+					        }).start();
 
 					}
 				});
@@ -99,4 +127,15 @@ public class MainActivity extends Activity {
 
 		mCardContainer.setAdapter(adapter);
 	}
+
+    private void updateColor() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+         
+                	linearLayout.setBackgroundColor(Color.WHITE);
+               
+            }
+        });
+    }
 }

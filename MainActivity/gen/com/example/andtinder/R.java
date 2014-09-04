@@ -37,10 +37,10 @@ public final class R {
 	}
 	public static final class id {
 		public static final int disordered = 0x7f040001;
-		public static final int divider_title = 0x7f040006;
-		public static final int global_container = 0x7f040004;
+		public static final int divider_title = 0x7f040007;
+		public static final int global_container = 0x7f040005;
 		public static final int ordered = 0x7f040000;
-		public static final int title = 0x7f040005;
+		public static final int title = 0x7f040006;
 	}
 	public static final class layout {
 		public static final int std_card_inner = 0x7f030001;
@@ -49,6 +49,7 @@ public final class R {
 		public static final int action_settings = 0x7f070002;
 		public static final int app_name = 0x7f070000;
 		public static final int hello_world = 0x7f070001;
+		public static final int slogan = 0x7f070003;
 	}
 	public static final class styleable {
 		public static final int[] CardContainer = { 0x010100af, 0x7f010000 };
