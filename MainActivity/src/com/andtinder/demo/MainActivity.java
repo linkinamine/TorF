@@ -20,9 +20,11 @@ package com.andtinder.demo;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.andtinder.model.CardModel;
@@ -31,11 +33,16 @@ import com.andtinder.view.SimpleCardStackAdapter;
 
 public class MainActivity extends Activity {
 
-    /**
-     * This variable is the container that will host our cards
-     */
+	/**
+	 * This variable is the container that will host our cards
+	 */
 	private CardContainer mCardContainer;
-	
+	private LinearLayout linearLayout;
+	final static int INTERVAL = 5000; // 1 second
+    boolean whichColor = true;
+    
+	private static int count = 0;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,64 +50,52 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.mainlayout);
 
 		mCardContainer = (CardContainer) findViewById(R.id.layoutview);
-
+		linearLayout = (LinearLayout) findViewById(R.id.layoutfull);
 		Resources r = getResources();
 
 		SimpleCardStackAdapter adapter = new SimpleCardStackAdapter(this);
 
-		adapter.add(new CardModel("Title1", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title2", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title3", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title4", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title5", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title6", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title1", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title2", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title3", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title4", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title5", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title6", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title1", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title2", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title3", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title4", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title5", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title6", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title1", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title2", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title3", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title4", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title5", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title6", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title1", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title2", "Description goes here", r.getDrawable(R.drawable.picture2)));
-		adapter.add(new CardModel("Title3", "Description goes here", r.getDrawable(R.drawable.picture3)));
-		adapter.add(new CardModel("Title4", "Description goes here", r.getDrawable(R.drawable.picture1)));
-		adapter.add(new CardModel("Title5", "Description goes here", r.getDrawable(R.drawable.picture2)));
+		adapter.add(new CardModel("Title1 dvdlkvnfd df, dfpgvd fvfoif ?",
+				"Description goes here", r.getDrawable(R.drawable.picture1)));
+		adapter.add(new CardModel(
+				"Description goes here Description goes hereDescription goes here ?",
+				"Description goes here", r.getDrawable(R.drawable.picture2)));
+		adapter.add(new CardModel("Description goes here Description goes her",
+				"Description goes here", r.getDrawable(R.drawable.picture3)));
 
-        CardModel cardModel = new CardModel("Title1", "Description goes here", r.getDrawable(R.drawable.picture1));
-        cardModel.setOnClickListener(new CardModel.OnClickListener() {
-           @Override
-           public void OnClickListener() {
-               Log.i("Swipeable Cards","I am pressing the card");
-           }
-        });
+		CardModel cardModel = new CardModel(
+				"Title1 \n fzfzfzfeffefzefzefeefezfzefe fezfzefzefeffzefezfe efezfzefzefefzeuh ???",
+				"Description goes here", r.getDrawable(R.drawable.picture1));
+		cardModel.setOnClickListener(new CardModel.OnClickListener() {
+			@Override
+			public void OnClickListener() {
+				Log.i("Swipeable Cards", "I am pressing the card");
+			}
+		});
 
-        
-        cardModel.setOnCardDimissedListener(new CardModel.OnCardDimissedListener() {
-            @Override
-            public void onTrue() {
-                Log.i("Swipeable Cards","I like the card");
-            }
+		cardModel
+				.setOnCardDimissedListener(new CardModel.OnCardDimissedListener() {
+					@Override
+					public void onTrue() {
+						Log.i("Swipeable Cards", "True");
+						count++;
+						linearLayout.setBackgroundColor(Color.GREEN);
 
-            @Override
-            public void onFalse() {
-                Log.i("Swipeable Cards","I dislike the card");
 
-            }
-        });
+					}
 
-        adapter.add(cardModel);
+					@Override
+					public void onFalse() {
+						Log.i("Swipeable Cards", "False");
+						count--;
+						linearLayout.setBackgroundColor(Color.RED);
+
+
+
+					}
+				});
+
+		adapter.add(cardModel);
 
 		mCardContainer.setAdapter(adapter);
 	}
