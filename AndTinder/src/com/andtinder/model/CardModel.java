@@ -24,7 +24,6 @@ import android.graphics.drawable.Drawable;
 public class CardModel {
 
 	private String questionText;
-	private Drawable cardImageDrawable;
 
 	private OnCardDimissedListener mOnCardDimissedListener = null;
 
@@ -41,17 +40,12 @@ public class CardModel {
 	}
 
 	public CardModel() {
-		this(null, null, (Drawable) null);
+		this(null, null);
 	}
 
-	public CardModel(String title, String description, Drawable cardImage) {
+	public CardModel(String title, String description) {
 		this.questionText = title;
-		this.cardImageDrawable = cardImage;
-	}
 
-	public CardModel(String title, String description, Bitmap cardImage) {
-		this.questionText = title;
-		this.cardImageDrawable = new BitmapDrawable(null, cardImage);
 	}
 
 	public String getTitle() {
@@ -60,14 +54,6 @@ public class CardModel {
 
 	public void setTitle(String title) {
 		this.questionText = title;
-	}
-
-	public Drawable getCardImageDrawable() {
-		return cardImageDrawable;
-	}
-
-	public void setCardImageDrawable(Drawable cardImageDrawable) {
-		this.cardImageDrawable = cardImageDrawable;
 	}
 
 	public void setOnCardDimissedListener(OnCardDimissedListener listener) {
