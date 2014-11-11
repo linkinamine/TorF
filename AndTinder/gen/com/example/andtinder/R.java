@@ -805,10 +805,11 @@ containing a value of this type.
         public static int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static int abc_search_url_text_holo=0x7f070005;
+        public static int abc_search_url_text_holo=0x7f070006;
         public static int abc_search_url_text_normal=0x7f070000;
         public static int abc_search_url_text_pressed=0x7f070002;
         public static int abc_search_url_text_selected=0x7f070001;
+        public static int black=0x7f070005;
         public static int card_bg=0x7f070003;
         public static int card_outline=0x7f070004;
     }

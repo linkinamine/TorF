@@ -5,11 +5,25 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent" >
 
-    <TextView
+    <com.andtinder.view.AutofitTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@color/card_bg"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:typeface="normal" />
+
+    <!--
+         <TextView
         android:id="@+id/title"
         style="@android:style/TextAppearance.Large.Inverse"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
      
@@ -17,9 +31,10 @@
         android:fontFamily="serif"
         android:padding="10dp"
         android:textColor="@android:color/primary_text_light"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         tools:text="Title" />
+    -->
 
     <View
         android:id="@+id/divider_title"

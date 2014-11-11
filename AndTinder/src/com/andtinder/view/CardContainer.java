@@ -453,9 +453,9 @@ public class CardContainer extends AdapterView<ListAdapter> {
 
                 if (cardModel.getOnCardDimissedListener() != null) {
                     if ( targetX > 0 ) {
-                        cardModel.getOnCardDimissedListener().onTrue();
+                        cardModel.getOnCardDimissedListener().onRight();
                     } else {
-                        cardModel.getOnCardDimissedListener().onFalse();
+                        cardModel.getOnCardDimissedListener().onLeft();
                     }
                 }
 

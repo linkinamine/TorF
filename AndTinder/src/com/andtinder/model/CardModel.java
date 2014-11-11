@@ -17,9 +17,6 @@
 
 package com.andtinder.model;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 
 public class CardModel {
 
@@ -30,9 +27,9 @@ public class CardModel {
 	private OnClickListener mOnClickListener = null;
 
 	public interface OnCardDimissedListener {
-		void onFalse();
+		void onLeft();
 
-		void onTrue();
+		void onRight();
 	}
 
 	public interface OnClickListener {
@@ -40,10 +37,12 @@ public class CardModel {
 	}
 
 	public CardModel() {
-		this(null, null);
+		this(null);
 	}
+	
+	
 
-	public CardModel(String title, String description) {
+	public CardModel(String title) {
 		this.questionText = title;
 
 	}
